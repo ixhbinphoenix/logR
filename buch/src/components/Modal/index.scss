@@ -2,12 +2,13 @@
 
 .modal {
   width: 20vw;
-  height: 40vh;
+  height: 50vh;
 
   &>.modal-header {
     background-color: $background-secondary;
     width: 100%;
-    padding: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     &>p {
       margin-left: 10%;
     }
