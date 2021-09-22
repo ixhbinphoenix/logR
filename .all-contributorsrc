@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ixhbinphoenix",
+      "name": "ixhbinphoenix",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47122082?v=4",
+      "profile": "http://ixhbinphoenix.github.io",
+      "contributions": [
+        "code",
+        "design",
+        "ideas",
+        "maintenance",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "logR",
+  "projectOwner": "ixhbinphoenix",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
