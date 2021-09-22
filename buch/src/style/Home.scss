@@ -1,0 +1,9 @@
+#header {
+  width: 100%;
+  background-color: #282828;
+  &>img {
+    height: 64px;
+    width: 64px;
+    margin: 16px;
+  }
+}
