@@ -2,12 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import '../style/Home.scss';
 import Modal from '../components/Modal';
+import LoginBox from '../components/LoginBox'
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
+
+  const confirm = (username: string, password: string) =>{
+    console.log(username + password);
+    close();
+  }
 
   // useEffect with an empty array as the 2nd Argument works like componentDidMount
   useEffect(() => {
@@ -27,7 +33,7 @@ export default function Home() {
           Launch modal
         </motion.button>
       </div>
-      {modalOpen && <Modal title="title" handleClose={close}></Modal>}
+      {modalOpen && <LoginBox handleCancel={close} handleConfirm={confirm}></LoginBox>}
     </div>
   )
 }
