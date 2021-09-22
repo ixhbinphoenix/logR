@@ -13,6 +13,19 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ixhbinphoenix",
+      "name": "ixhbinphoenix",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47122082?v=4",
+      "profile": "http://ixhbinphoenix.github.io",
+      "contributions": [
+        "code",
+        "design",
+        "ideas",
+        "maintenance",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
