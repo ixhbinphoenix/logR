@@ -1,39 +1,47 @@
 @import "../../style/vars.scss";
 
 .loginbox{
-    border: 1px;
-    border-style: solid;
-    border-color: #eee;
-    padding: 5px;
-    background-color: $background-secondary;
-}
-  
-.text-input{
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
+    display: flex;
+    flex-direction: row;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: $background-primary;
+    &>.modal-text-input {
+        outline: none;
+        height: 8%;
+        width: 80%;
+        color: white;
+        background-color: $background-primary;
+        border: none;
+        border-bottom: 2px $background-secondary solid;
+        &:focus {
+            border-bottom: 2px lightblue solid;
+        }
 
-.loginbox-buttons{
-    margin: 5px;
+        &#loginbox-password-input {
+            margin-bottom: 20%;
+        }
+    }
 }
 
 .loginbox-button{
-    border: 1px;
-    border-style: solid;
-    border-color: inherit;
-    color: inherit;
+    width: 80%;
+    border: none;
+    margin-bottom: 5%;
+    padding: 10px 0 10px 0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
     background-color: $background-secondary;
-    transition-duration: 0.2s;
-    margin: 1px;
-}
 
-.loginbox-button:hover {
-    background-color: rgb(140, 140, 140);
-}
-
-.loginbox-button:active {
-    background-color: #151515;
+    &:hover {
+        background-color: rgb(140, 140, 140);
+    }
+    &:active {
+        background-color: lightblue;
+    }
 }
 

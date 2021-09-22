@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "./index.scss";
 
 interface IProps {
   children: JSX.Element,

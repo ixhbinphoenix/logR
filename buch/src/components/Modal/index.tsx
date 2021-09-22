@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop";
+import "./index.scss";
 
 interface IProps {
   handleClose: () => void,
@@ -44,7 +45,9 @@ export default function Modal(props: IProps) {
         <div className="modal-header">
           <p>{props.title}</p>
         </div>
-        {props.children}
+        <div className="modal-children">
+          {props.children}
+        </div>
       </motion.div>
     </Backdrop>
   )
