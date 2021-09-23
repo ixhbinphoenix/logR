@@ -19,9 +19,11 @@
         &:focus {
             border-bottom: 2px lightblue solid;
         }
-
+        &.no-input-errormessage{
+            color: rgb(151, 0, 0);
+        }
         &#loginbox-password-input {
-            margin-bottom: 20%;
+            margin-bottom: 4.4vh;
         }
     }
 }
@@ -29,7 +31,7 @@
 .loginbox-button{
     width: 80%;
     border: none;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     padding: 10px 0 10px 0;
     border-radius: 12px;
     font-size: 16px;

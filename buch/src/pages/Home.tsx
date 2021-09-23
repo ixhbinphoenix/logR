@@ -5,13 +5,18 @@ import Modal from '../components/Modal';
 import LoginBox from '../components/LoginBox'
 
 export default function Home() {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [loginBoxOpen, setLoginBoxOpen] = useState(false);
 
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
+  const close = () => setLoginBoxOpen(false);
+  const open = () => setLoginBoxOpen(true);
 
   const confirm = (username: string, password: string) =>{
-    console.log(username + password);
+    console.log("Login: " + username + " " + password);
+    close();
+  }
+
+  const register = (username: string, password: string) =>{
+    console.log("Register: " + username + " " + password);
     close();
   }
 
@@ -28,12 +33,12 @@ export default function Home() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="modal-button"
-          onClick={() => (modalOpen ? close() : open())}
+          onClick={() => (loginBoxOpen ? close() : open())}
         >
-          Launch modal
+          Open Login
         </motion.button>
       </div>
-      {modalOpen && <LoginBox handleCancel={close} handleConfirm={confirm}></LoginBox>}
+      {loginBoxOpen && <LoginBox handleRegister={register} handleCancel={close} handleConfirm={confirm}></LoginBox>}
     </div>
   )
 }

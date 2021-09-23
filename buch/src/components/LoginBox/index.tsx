@@ -4,14 +4,22 @@ import "./index.scss";
 
 interface IProps {
     handleConfirm: (username: string, password: string) => void;
+    handleRegister: (username: string, password: string) => void;
     handleCancel: () => void;
 }
 
 export default function LoginBox(props: IProps) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+    const [showErrorMessage, setShowErrorMessage] = useState(false);
+
     const confirm = () => {
+        username == "" && setShowErrorMessage(true);
         props.handleConfirm(username, password);
+    }
+    const register = () => {
+        props.handleRegister(username, password);
     }
     return (
         <Modal handleClose={props.handleCancel} title="Login">
@@ -31,6 +39,7 @@ export default function LoginBox(props: IProps) {
                     className="modal-text-input">
                 </input>
                 <button onClick={confirm} className="loginbox-button">Confirm</button>
+                <button onClick={register} className="loginbox-button">Register</button>
                 <button onClick={props.handleCancel} className="loginbox-button">Cancel</button>
             </div>
         </Modal>
