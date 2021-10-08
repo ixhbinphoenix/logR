@@ -1,29 +1,35 @@
 import React, { useState } from "react";
+import { sha256 } from "hash.js";
 import Modal from "../Modal";
 import "./index.scss";
+import ModalError from "../ModalError";
 
 interface IProps {
     handleConfirm: (username: string, password: string) => void;
-    handleRegister: (username: string, password: string) => void;
     handleCancel: () => void;
 }
 
 export default function LoginBox(props: IProps) {
     const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [pass, setPass] = useState("");
 
-    const [showErrorMessage, setShowErrorMessage] = useState(false);
+    const [error, setError] = useState("");
 
     const confirm = () => {
-        username == "" && setShowErrorMessage(true);
-        props.handleConfirm(username, password);
-    }
-    const register = () => {
-        props.handleRegister(username, password);
+        if (username == "") {
+            setError("You have to provide a username!");
+        } else if (pass == "") {
+            setError("You have to provide a password!");
+        } else {
+            props.handleConfirm(username, sha256().update(pass).digest('hex').toString());
+        }
     }
     return (
         <Modal handleClose={props.handleCancel} title="Login">
             <div className="loginbox">
+                {(error !== "") &&
+                    <ModalError error={error} handleClose={() => { setError("") }}></ModalError>
+                }
                 <p className="modal-input-label">Username:</p>
                 <input
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setUsername(e.target.value) }}
@@ -33,13 +39,12 @@ export default function LoginBox(props: IProps) {
                 </input>
                 <p>Password:</p>
                 <input
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setPassword(e.target.value) }}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setPass(e.target.value) }}
                     type="password"
                     id="loginbox-password-input"
                     className="modal-text-input">
                 </input>
                 <button onClick={confirm} className="loginbox-button">Confirm</button>
-                <button onClick={register} className="loginbox-button">Register</button>
                 <button onClick={props.handleCancel} className="loginbox-button">Cancel</button>
             </div>
         </Modal>

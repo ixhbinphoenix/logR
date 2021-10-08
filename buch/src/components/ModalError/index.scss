@@ -1,0 +1,11 @@
+.modal-error-box {
+    background-color: lightcoral;
+    width: 100%;
+    display: inline;
+
+    &>.modal-error-X {
+        float: left;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+}
