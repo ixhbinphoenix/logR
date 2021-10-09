@@ -9,6 +9,8 @@
     height: 100%;
     background-color: $background-primary;
     &>.modal-text-input {
+        font-size: 18px;
+        font-weight: 100;
         outline: none;
         height: 8%;
         width: 80%;
@@ -18,9 +20,6 @@
         border-bottom: 2px $background-secondary solid;
         &:focus {
             border-bottom: 2px lightblue solid;
-        }
-        &.no-input-errormessage{
-            color: rgb(151, 0, 0);
         }
         &#loginbox-password-input {
             margin-bottom: 4.4vh;

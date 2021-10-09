@@ -1,3 +1,3 @@
 export interface Config {
-  port: Number
+  port: number
 }

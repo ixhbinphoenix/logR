@@ -2,6 +2,7 @@
   "name": "buch",
   "version": "0.0.0",
   "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview"
