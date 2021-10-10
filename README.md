@@ -4,6 +4,8 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 The Logging Solution for Humans
 
+If you want to contribute, read [CONTRIBUTING.md](CONTRIBUTING.md) first
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
