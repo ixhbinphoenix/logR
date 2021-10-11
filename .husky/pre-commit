@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo 'TODO: Implement Test'
-
-exit 0
+echo "Running tests..."
+cd lehrer
+pnpm run-script test

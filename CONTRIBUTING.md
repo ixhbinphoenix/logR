@@ -27,13 +27,13 @@ Before working on either buch or lehrer, run `pnpm i` in the root directory to i
 ### Buch
 
 1. Run `pnpm i` to install all dependencies
-2. For a auto-refreshing dev server, run `pnpm run-script dev` or `vite`
-3. For building for production, run `pnpm run-script build`
+2. For a auto-refreshing dev server, run `pnpm dev` or `vite`
+3. For building for production, run `pnpm build`
 
 ### Lehrer
 
 1. Run `pnpm i` to install all dependencies
-2. Run `pnpm run-script run` to compile and run
+2. Run `pnpm start` to compile and run
 
 ## Submiting a PR
 
