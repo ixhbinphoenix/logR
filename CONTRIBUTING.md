@@ -60,6 +60,7 @@ $type($project): $description [$ci]
 - $type
   - feat - New Feature
   - fix - Bug fix
+  - sec - Security fix
   - refactor - Refactoring that does no functional changes
   - docs - Changes to documentation
   - maint - Maintenance like CI, tests and scripts

@@ -1,7 +1,7 @@
 import * as express from "express";
 import * as cfg from "./utils/config";
 import * as helmet from "helmet";
-import {compare as compareBcrypt} from "bcrypt"
+import {compare as compareBcrypt} from "bcryptjs"
 import { validateAuthType } from "./lib/validation";
 import { genToken } from "./utils/auth";
 
